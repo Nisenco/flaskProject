@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}用户列表{% endblock %}
+
+{% block content %}
+    <h1>用户信息</h1>
+    <h2>用户人数：{{ users | length }}</h2>
+    <table cellpadding="1">
+        {% for item in users %}
+            <tr>
+                <td><span>{{ loop.index }}</span></td>
+                <td><span>{{ item.username }}</span></td>
+                <td>{{ item.phone }}</td>
+                <td><button>修改</button> || <button>删除</button></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

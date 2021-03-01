@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}用户中心{% endblock %}</title>
+    <style>
+        #header ul{
+            width: 100%;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+        }
+        #header li{
+            display:inline-block;
+            width: 100px;
+            margin-right: 6px;
+
+        }
+    </style>
+    {% block mycss %}{% endblock %}
+</head>
+<body>
+<div id="header">
+    <ul>
+        <li>测试1</li>
+        <li>测试2</li>
+        <li>测试3</li>
+        <li>测试4</li>
+    </ul>
+</div>
+<div id="content">
+    {% block content %}
+    
+    {% endblock %}
+</div>
+<div id="footer">
+    <h1>底部</h1>
+</div>
+</body>
+{% block myjs %}{% endblock %}
+</html>
